@@ -7,7 +7,7 @@ public class Ispalindrome {
         int j = 10;
         int p;
         String k = new String(String.valueOf(x));
-        //har c;
+        //char c;
         for (char c : k.toCharArray()){
             p = x % 10;
             x = (x - p) / 10;
