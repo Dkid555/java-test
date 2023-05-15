@@ -12,9 +12,9 @@ public class ValidSudoku {
             for (int j = 0; j <9; ++j) {
                 if (board[i][j] != ".") {
                     String b = "(" + board[i][j] + ")";
-                    if (!seen.add(b + i) ||
-                            !seen.add(j + b) ||
-                            !seen.add(i/3 + b + j/3)) {
+                    if (!seen.add(b + " in row " + i) ||
+                            !seen.add(b + " in column " + j) ||
+                            !seen.add(b + " in block " + i/3 + "-" + j/3)) {
                         return false;
 
                     }
