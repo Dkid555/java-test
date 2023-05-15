@@ -45,7 +45,7 @@ public class PapaQueue {
         return s.replaceAll("null", "");
     }
     public int peek(){
-        
+        return 0;
     }
 
     public static void main(String[] args) {

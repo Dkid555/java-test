@@ -20,7 +20,7 @@ public class Ispalindrome {
     }
 
     public static void main(String[] args) {
-        int x = 1213;
+        int x = 19091;
         System.out.println(Palindrom(x));
 
     }
