@@ -2,7 +2,7 @@ package sql;
 
 import java.util.ArrayList;
 
-public class Query implements tile_csv {
+public class Query implements TileCsv {
     private String qs;
     @Override
     public String ID(ArrayList<String[]> data, int i){

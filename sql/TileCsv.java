@@ -2,7 +2,7 @@ package sql;
 
 import java.util.ArrayList;
 
-public interface tile_csv {
+public interface TileCsv {
     String ID(ArrayList<String[]> data, int i);
 
     String Country(ArrayList<String[]> data, int i);
