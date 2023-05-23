@@ -49,6 +49,6 @@ public class ClosesSum3 {
     public static void main(String[] args) {
         int [] nums = new int[]{1,2,-1,3,12,-10,15,100,-1000};
         int target = 0;
-        CloseSum(nums,target);
+        System.out.println(CloseSum(nums,target));
     }
 }

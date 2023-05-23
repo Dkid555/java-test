@@ -1,5 +1,8 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DeepestLeavesSum {
     protected static int sum = 0;
     protected static int maxheight = 0;
@@ -42,7 +45,6 @@ public class DeepestLeavesSum {
         TreeNode q3 = new TreeNode(8, q9, q10);
         TreeNode q2 = new TreeNode(7, q4, q5);
         TreeNode q = new TreeNode(6, q2, q3);
-
         find(0, root);
         System.out.println(sum);
         //sum = 0;

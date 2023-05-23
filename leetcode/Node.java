@@ -1,6 +1,6 @@
 package leetcode;
 
-public class Node{
+public class Node {
     int val;
     Node next;
 
@@ -8,8 +8,6 @@ public class Node{
         val = 0;
         next = null;
     }
-
-
 
     public void hash() {
         this.hashCode();
@@ -24,13 +22,38 @@ public class Node{
         this.val = val;
         this.next = next;
     }
+    public void Add(int i){
+        Object n = this;
+        while(((Node) n).next != null){
+            n = ((Node) n).next;
+        }
+        Object n1 = new Node(i, null);
+        ((Node) n).next = (Node) n1;
+    }
+    public Node reverse(){
+        Node curr = this;
+        Node prev = null;
+        Node next = null;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
 
     public String toString() {
-        return "from to toString";
+        return (this.val + " " + this.next).replaceAll(" null", "");
     }
+
+    // поигрался с объектом)
     public static void main(String[] args) {
-        Node n = new Node(1, null);
-        System.out.println(n.hashCode());
+        Object n = new Node(1, null);
+        ((Node) n).Add(10);
+        ((Node) n).Add(15);
         System.out.println(n.toString());
+        n = ((Node) n).reverse();
+        System.out.println(n);
     }
 }

@@ -17,7 +17,7 @@ public class Polymorphism {
         p = new Polymorphism2();
         p.m1();
         Polymorphism2 p2 = new Polymorphism2();
-        p2.m2();
+        p2.m1();
     }
 }
 
