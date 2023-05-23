@@ -5,14 +5,14 @@ public class Query {
 
     public void Create(ReadCSV data, int i) {
         this.qs = "insert into Tiles values(" + data.file.get(i)[0]
-                + ",'" + data.file.get(i)[1] + "','" //ID int
-                + data.file.get(i)[2] + "','" //Country varchar
-                + data.file.get(i)[3] + "','" //Fabric varchar
-                + data.file.get(i)[4] + "','" //Collection varchar
-                + data.file.get(i)[5] + "'," //Fab_Article `varchar
-                + data.file.get(i)[6] + "," //Tile_Name varchar
-                + data.file.get(i)[7] + "," //
-                + data.file.get(i)[8] + ",'" //
+                + ",'" + data.file.get(i)[1] + "','"
+                + data.file.get(i)[2] + "','"
+                + data.file.get(i)[3] + "','"
+                + data.file.get(i)[4] + "','"
+                + data.file.get(i)[5] + "',"
+                + data.file.get(i)[6] + ","
+                + data.file.get(i)[7] + ","
+                + data.file.get(i)[8] + ",'"
                 + data.file.get(i)[9] + "','"
                 + data.file.get(i)[10] + "',"
                 + data.file.get(i)[11] + ","
