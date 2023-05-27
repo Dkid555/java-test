@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="java-test" />
+        <module name="spring-boot" />
+        <module name="spring-annotations" />
+        <module name="java-mysql-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven-test-api" target="1.8" />
+      <module name="maven-test-api-test" target="1.8" />
+      <module name="maven-test-base" target="1.8" />
+      <module name="maven-test-biz" target="1.8" />
+      <module name="maven-test-bundle" target="1.8" />
+      <module name="maven-test-bundle-mock" target="1.8" />
+      <module name="maven-test-provider" target="1.8" />
+      <module name="maven-test-provider-mock" target="1.8" />
+      <module name="maven-test-task" target="1.8" />
+      <module name="maven-test-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="java-test" options="--add-exports jdk.javadoc/jdk.javadoc.internal.doclets.toolkit.util=ALL-UNNAMED" />
+      <module name="java-test-parent" options="" />
+      <module name="spring-boot" options="-parameters" />
     </option>
   </component>
 </project>
