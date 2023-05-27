@@ -1,0 +1,30 @@
+# idea ignore
+.idea/
+*.iml
+*/*.iml
+
+# eclipse ignore
+.project
+.classpath
+/.settings
+target
+*/.gitigore
+*/.project
+*/.classpath
+*/.settings
+*/target
+
+# mvn ignore
+pom.xml.versionsBackup
+*/pom.xml.versionsBackup
+
+maven-test-api/src
+maven-test-api-test/src/main
+maven-test-api-test/src/test/data
+maven-test-api-test/src/test/java
+maven-test-api-test/src/test/resources/testng.xml
+maven-test-base/src
+maven-test-bundle/src
+maven-test-bundle-mock/src
+
+
