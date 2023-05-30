@@ -13,7 +13,12 @@ public class MusicPlayer {
 
     String Path;
     private MusicList musicList;
-    @Value("${musicPlayer.nameRap}")
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Value("${musicPlayer.nameFunk}")
     private String name;
 
     @Value("${musicPlayer.volume}")
@@ -26,13 +31,9 @@ public class MusicPlayer {
 
     public void MusicPlay() {
 
-        operation choose = (int i) -> {
-            if (i == 0)
-                Path = "${musicPlayer.nameRap}";
-            else if (i == 1)
-                Path = "${musicPlayer.nameClassic}";
-            else Path = "${musicPlayer.nameFunk}";
-        };
+        if (i == 1) this.setName(" Mozart");
+        else if (i == 2) this.setName(" Curtis Jackson");
+
 
         System.out.println("Music: " + musicList.getMusicList(i).getSong() + "\nname :" + name + "\nvolume: " + volume);
     }

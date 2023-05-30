@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java-test-parent.iml" filepath="$PROJECT_DIR$/java-test-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web-app.iml" filepath="$PROJECT_DIR$/web-app.iml" />
     </modules>
   </component>
 </project>

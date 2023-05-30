@@ -1,4 +1,4 @@
-package com.multi;
+package com.multithreading;
 
 public class MyRunTest implements Runnable {
     public String name;

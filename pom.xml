@@ -17,5 +17,8 @@
         <module>spring-boot</module>
         <module>java-mysql-test</module>
         <module>spring-annotations</module>
+        <!--        <module>java-web-app</module>-->
+        <module>web-app</module>
+        <!--        <module>java-deadlock</module>-->
     </modules>
 </project>

@@ -1,4 +1,4 @@
-package com.multi;
+package com.multithreading;
 
 public class MyThreadTest extends Thread {
     public String name;
