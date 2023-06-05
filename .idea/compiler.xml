@@ -2,15 +2,18 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-test" />
-        <module name="spring-boot" />
         <module name="web-app" />
-        <module name="spring-annotations" />
         <module name="java-mysql-test" />
+        <module name="java-mysql-hibernate" />
+        <module name="spring-boot" />
+        <module name="java-hibernate" />
+        <module name="spring-annotations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

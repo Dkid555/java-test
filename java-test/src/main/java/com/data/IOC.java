@@ -1,5 +1,7 @@
 package com.data;
 
+import java.util.Arrays;
+
 interface Music {
     int checkID();
 }
@@ -38,6 +40,13 @@ public class IOC {
     public static void main(String[] args) {
         MusicPlayer musicPlayer = new MusicPlayer(new Rock());
         musicPlayer.playMusic();
+        String[] ar = {"c", "d", "b", "a", "e"};
+        int[] as = new int[]{10, 5, 1, 35, 1, 2, 3, 4, 5};
+        int y = 10;
+        Arrays.parallelSort(as);
+        for (int a : as) System.out.println(a);
+//        System.out.println();
+
 
     }
 }

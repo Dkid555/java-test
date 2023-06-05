@@ -2,13 +2,17 @@ package com.app.main;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @ComponentScan("com.app")
-@EnableWebMvc
+
+//@EnableWebMvc
 class SpringConfig implements WebMvcConfigurer {
+//    @Override
+//    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("resources/**").addResourceLocations("resources/");
+//    }
     //private final ApplicationContext applicationContext;
 //    @Bean
 //    public ClassLoaderTemplateResolver secondaryTemplateResolver(){
@@ -24,5 +28,13 @@ class SpringConfig implements WebMvcConfigurer {
 
 //        }
 //    @Override
-//    public void addResourcesHandlers()
+//    public void addResourcesHandlers
+
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//
+//        // Css resource.
+//        registry.addResourceHandler("/resources/**") //
+//                .addResourceLocations("/resources/").setCachePeriod(31556926);
+//
+//    }
 }

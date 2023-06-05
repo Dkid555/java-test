@@ -1,8 +1,6 @@
 package com.data;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ListTest {
 
@@ -16,6 +14,8 @@ public class ListTest {
 
         System.out.println(list);
 
+        System.out.println("===========================================================");
+
         List<Integer> list3 = new LinkedList();
 
         list3.add(0);
@@ -24,6 +24,13 @@ public class ListTest {
 
 
         System.out.println(list3.stream().filter(l -> l > 0).toList());
+
+        System.out.println("===========================================================");
+        List<Integer> number = Arrays.asList(2, 3, 4, 5);
+//        List square = number.stream().map(x -> x+x).collect(Collectors.toList());
+        String s = "asdf";
+        String a = s;
+        Set<Integer> set = new LinkedHashSet<>();
     }
 
 }

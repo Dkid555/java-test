@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ControllerHtml {
-    @RequestMapping("/h1")
+    @RequestMapping("/hello")
     public String hellopage() {
         return "hello";
     }
@@ -18,6 +18,11 @@ public class ControllerHtml {
     @RequestMapping(value = "/index")
     public String index() {
         return "index";
+    }
+
+    @RequestMapping("/Secure")
+    public String Secure() {
+        return "SecurePage";
     }
 
 }
