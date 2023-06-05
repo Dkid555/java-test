@@ -8,9 +8,9 @@ public class Start {
     public static void main(String[] args) {
         while (true) {
             System.out.println("to Display entity: input - d");
-            System.out.println("to add csv: input - a");
-            System.out.println("to erase by id: input - e");
-            System.out.println("to exit: input - t");
+            System.out.println("to Add csv: input - a");
+            System.out.println("to Erase by id: input - e");
+            System.out.println("to Exit: input - t");
             Scanner sc = new Scanner(System.in);
             String s = sc.nextLine();
             if (s.equals("d")) {
