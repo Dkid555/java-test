@@ -68,11 +68,14 @@ public class tilesHelper {
         }
     }
 
-    public void deleteByID(int id) {
+    public void deleteBy(String val) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            String hql = "delete TilesEntity where id = :id";
-            Query query = session.createQuery(hql).setParameter("id", id);
+            String hql = "delete TilesEntity where id = :val";
+
+            Query query = session.createQuery(hql);
+//            query.setParameter("parameter", parameter.replaceAll("\"", ""));
+            query.setParameter("val", val);//
             int res = query.executeUpdate();
             if (res == 1) {
                 System.out.println("Your delete successful");

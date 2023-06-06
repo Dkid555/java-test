@@ -22,8 +22,8 @@ public class Start {
                 new tilesHelper().addCsv(Data.newOnes);
             } else if (s.equals("e")) {
                 System.out.println("Input ID: ");
-                Scanner id = new Scanner(System.in);
-                new tilesHelper().deleteByID(Integer.valueOf(id.nextLine()));
+                Scanner val = new Scanner(System.in);
+                new tilesHelper().deleteBy((val.nextLine()));
             }
 
         }
