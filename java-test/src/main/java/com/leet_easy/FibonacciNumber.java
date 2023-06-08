@@ -18,6 +18,6 @@ public class FibonacciNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(Fibonachi(42));
+        System.out.println(Fibonachi(19));
     }
 }
