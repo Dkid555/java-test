@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="java-test" />
         <module name="web-app" />
+        <module name="junit" />
         <module name="java-mysql-test" />
         <module name="java-mysql-hibernate" />
         <module name="spring-boot" />

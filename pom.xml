@@ -21,6 +21,7 @@
         <module>web-app</module>
         <module>java-hibernate</module>
         <module>java-mysql-hibernate</module>
+        <module>junit</module>
 
         <!--        <module>java-deadlock</module>-->
     </modules>

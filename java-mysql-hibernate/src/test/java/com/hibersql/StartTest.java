@@ -29,6 +29,7 @@ public class StartTest
      * Rigourous Test :-)
      */
     public void testApp() {
+
         assertTrue(true);
     }
 }
