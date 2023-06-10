@@ -13,11 +13,13 @@
         <module name="java-mysql-test" />
         <module name="java-mysql-hibernate" />
         <module name="spring-boot" />
+        <module name="java-csvjson" />
         <module name="java-hibernate" />
         <module name="spring-annotations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CsvToJson" target="18" />
       <module name="java-deadlock" target="18" />
       <module name="java-web-app" target="18" />
       <module name="maven-test-api" target="1.8" />
