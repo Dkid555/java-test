@@ -26,12 +26,10 @@ public class pdfextractallimages extends PDFStreamEngine {
     private String PATH1;
 
     protected void extractpdf(String fileName, String extractPath) throws Exception {
-
-
         try {
             PDDocument document = PDDocument.load(new File(fileName));
             pdfextractallimages printer = new pdfextractallimages();
-            printer.setPATH1(extractPath);
+            printer.setPATH1(extractPath + "\\");
             int pageNum = 0;
             for (PDPage page : document.getPages()) {
                 pageNum++;
