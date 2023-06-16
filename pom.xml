@@ -23,6 +23,8 @@
         <module>java-mysql-hibernate</module>
         <module>junit</module>
         <module>java-csvjson</module>
+        <module>Java-Selenium-test</module>
+        <module>pdf-extract-images</module>
 
 
         <!--        <module>java-deadlock</module>-->

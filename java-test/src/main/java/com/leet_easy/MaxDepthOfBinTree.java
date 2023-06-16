@@ -1,7 +1,7 @@
 package com.leet_easy;
 
 public class MaxDepthOfBinTree {
-    int i = 1;
+//    int i = 1;
 
     static int Depth(TreeNode tree) {
         if (tree == null) return 0;

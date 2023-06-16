@@ -1,0 +1,92 @@
+[2023-06-15 14:34:11] ---------- Windows v10.0.22621.0 (C:\Users\dima\IdeaProjects\java-test\ironpdfengine.log) ----------
+[2023-06-15 14:34:11] Using deployment directory 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-06-15 14:34:11] Creating deployment candidates using root path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\' (download: False)
+[2023-06-15 14:34:11] Creating folder deployments for win-x64
+[2023-06-15 14:34:11] Creating embedded deployments for win-x64
+[2023-06-15 14:34:11] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-06-15 14:34:11] Failed to locate assembly(s) for deployment 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\' at path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\'
+[2023-06-15 14:34:11] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-06-15 14:34:11] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-06-15 14:34:11] Failed to locate assembly(s) for deployment 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64' at path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-06-15 14:34:11] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-06-15 14:34:11] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-06-15 14:34:11] Failed to locate assembly(s) for deployment 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64' at path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+[2023-06-15 14:34:11] IronSoftware.Exceptions.IronSoftwareAssemblyMissingException: Failed to locate 'IronInterop' at 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64'
+   at IronSoftware.Deployment.SmartDeploymentBase.CheckAssemblies(String path)
+   at IronSoftware.Deployment.SmartDeploymentBase.Deploy(Boolean download)
+[2023-06-15 14:34:11] Attempting deployment for 'IronPdf' 2023.3.0.12968 using 'Embedded resource (IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75: IronPdf) to path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native''
+[2023-06-15 14:34:11] Successfully found resource with name 'IronPdf.win-x64.zip' in assembly 'IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75
+[2023-06-15 14:34:12] Successfully deployed embedded resource 'IronPdf' to 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-06-15 14:34:12] Successfully located 'IronInterop' at 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-06-15 14:34:13] Determining deployment commands for platform 'Windows' v10.0.22621.0
+[2023-06-15 14:34:13] Using deployment instructions for 'default' v
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\ucrtbase.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\vcruntime140_1.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\msvcp140.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\dxva2.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\chrome_elf.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\libcef.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-06-15 14:34:13] Attempting to load Windows library 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-06-15 14:34:13] Successfully loaded native library from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronInterop.dll'
+[2023-06-15 14:34:13] Successfully loaded 'IronInterop' version '2023.3.0.12968' from 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-06-15 14:34:13] Successfully deployed 'IronPdf' using 'Embedded resource (IronPdf, Version=2023.4.0.4, Culture=neutral, PublicKeyToken=94e1c31412563c75: IronPdf) to path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native''
+[2023-06-15 14:34:13] Initializing Chrome renderer for OS Name: Windows, Identifier: win, Version: 10.0.22621.0, VersionName: , Domain: IronPdfEngine, Thread: , Path: C:\Users\dima\IdeaProjects\java-test
+[2023-06-15 14:34:13] 14:34:13 (33048): Detected operating system windows
+[2023-06-15 14:34:13] 14:34:13 (33048): ~ Chrome renderer v2023.3.0.12968~
+[2023-06-15 14:34:13] 14:34:13 (33048): IsSingleProcess: 0
+[2023-06-15 14:34:13] 14:34:13 (33048): Creating Cef proxy controller
+[2023-06-15 14:34:13] 14:34:13 (33048): Creating Cef interface
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new lifespan events
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new browser process handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new load handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new render handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new render process handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new print handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new dev tools handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new dev tools registration factory
+[2023-06-15 14:34:13] 14:34:13 (33048): Created new lifespan handler
+[2023-06-15 14:34:13] 14:34:13 (33048): Assigning Cef proxy controller events...
+[2023-06-15 14:34:13] 14:34:13 (33048): Assigning Cef proxy controller stream provider...
+[2023-06-15 14:34:13] 14:34:13 (33048): Initializing Cef proxy controller
+[2023-06-15 14:34:13] 14:34:13 (33048): Using subprocess path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe'
+[2023-06-15 14:34:13] 14:34:13 (33048): Using framework path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-06-15 14:34:13] 14:34:13 (33048): Using locales path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales'
+[2023-06-15 14:34:13] 14:34:13 (33048): Using resources path 'C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native'
+[2023-06-15 14:34:13] 14:34:13 (33048): Process os_name: 'windows'
+[2023-06-15 14:34:13] 14:34:13 (33048): gpu_mode: '0'
+[2023-06-15 14:34:13] 14:34:13 (33048): Launching Main process '"C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\IronPdfEngine.exe" --browser-subprocess-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --no-sandbox --lang=en-US --log-file=cef.log --log-severity=disable --resources-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --locales-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --disable-features=CalculateNativeWinOcclusion,WinUseBrowserSpellChecker,BackForwardCache --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests host=127.0.0.1 port=33350 enable_debug=false log_path=ironpdfengine.log programming_language=java license_key=null'
+[2023-06-15 14:34:13] 14:34:13 (5372): Process os_name: 'windows'
+[2023-06-15 14:34:13] 14:34:13 (5372): gpu_mode: '0'
+[2023-06-15 14:34:13] 14:34:13 (5372): Launching child process '"C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=gpu-process --no-sandbox --headless --locales-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\dima\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:2'
+[2023-06-15 14:34:13] 14:34:13 (33048): Cef initialization succeeded
+[2023-06-15 14:34:13] 14:34:13 (5372): Cef context initialized
+[2023-06-15 14:34:13] 14:34:13 (5372): Registering custom scheme for rendering raw html
+[2023-06-15 14:34:13] 14:34:13 (5372): Successfully registered custom scheme
+[2023-06-15 14:34:13] 14:34:13 (5372): Cef engine initialization complete
+[2023-06-15 14:34:13] 14:34:13 (5372): Process os_name: 'windows'
+[2023-06-15 14:34:13] 14:34:13 (5372): gpu_mode: '0'
+[2023-06-15 14:34:13] 14:34:13 (5372): Launching child process '"C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\IronCefSubprocess.exe" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --ignore-urlfetcher-cert-requests --no-sandbox --ignore-certificate-errors --mute-audio --ignore-certificate-errors --locales-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native\locales" --log-severity=disable --resources-dir-path="C:\Users\dima\IdeaProjects\java-test\IronPdfEngine.2023.4.4.Windows.x64\runtimes\win-x64\native" --lang=en-US --user-data-dir="C:\Users\dima\AppData\Local\Temp" --disable-web-security --disable-component-update --disable-background-downloads --disable-delta-updates --disable-pings --headless --hide-scrollbars --mute-audio --disable-gpu --disable-gpu-compositing --disable-software-rasterizer --disable-gpu-shader-disk-cache --disable-dev-shm-usage --enable-media-stream --no-sandbox --ignore-certificate-errors --ignore-ssl-errors --ignore-urlfetcher-cert-requests /prefetch:8'
+[2023-06-15 14:34:14] 14:34:14 (39188): PdfDocumentFactory created document 00000225CA3239F0 from 1948591 bytes
+[2023-06-15 14:34:14] 14:34:14 (39188): Storing new document 0
+[2023-06-15 14:34:14] Retrieved license key from inline variable
+[2023-06-15 14:34:14] Error 0x01 while validating license key
