@@ -6,9 +6,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @ComponentScan("com.app")
-
+//@PropertySource("classpath:src/main/resources/application.properties")
 //@EnableWebMvc
 class SpringConfig implements WebMvcConfigurer {
+//    @Autowired
+//    Environment env;
 //    @Override
 //    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
 //        registry.addResourceHandler("resources/**").addResourceLocations("resources/");
