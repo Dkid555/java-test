@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h1> Thymeleaf Swith Case demo</h1>
+        <h4 th:text="${user.getUserName()}"></h4>
+        <div th:switch="${user.getRole()}">
+            <p th:case="'ADMIN'"> user is an admin</p>
+            <p th:case="'MANAGER'"> user is an manger</p>
+            <p th:case="'GUEST'"> user is an guest</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

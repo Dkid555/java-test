@@ -115,6 +115,14 @@
             <version>0.8.1</version>
         </dependency>
 
+        <!--        lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-maven-plugin</artifactId>
+            <version>1.18.20.0</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <title>Title</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th> User Name</th>
+        <th> User Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.getUserName()}"></td>
+        <td th:text="${user.getEmail()}"></td>
+        <td>
+            <button class="btn-primary" th:if="${user.role} == 'ADMIN'">Update</button>
+            >
+            <button class="btn-primary" th:if="${user.role} == 'ADMIN'">Delete</button>
+            >
+            <button class="btn btn-primary" th:if="${user.role} == 'ADMIN'">View</button>
+            >
+        </td>
+    </tr>
+    </tbody>
+</table>
+>
+</body>
+</html>

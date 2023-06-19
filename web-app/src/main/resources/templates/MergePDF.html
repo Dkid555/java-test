@@ -1,56 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
     <title>Title</title>
 </head>
 <body>
-<div>
-    <p><input name="name1"></p>
-    <button id="download-pdf"> Generate</button>
-    </p>
-    <script>
-        const downloadPdf = document
-            .querySelector("#download-pdf");
-        downloadPdf
-    </script>
-</div>
+
 <div>
     <a href="/pdf/">download merged pdf</a>
 </div>
 
-
-<div>
-    <a href="/pdf1/">Generate after you have uploaded 2</a>
-</div>
-
-
-<div style="solid-color: aliceblue; ">
-    <form action="/upload" enctype="multipart/form-data" method="post">
+<div class="ui-widget">
+    <form action="/upload" enctype="multipart/form-data" method="post" class="container">
         <input type="file" name="file"><br>
         <button>Upload</button>
     </form>
 </div>
 
+<div class="ui-widget">
+    <form action="/pdf1/" class="container">
+        <!-- HTML !-->
+        <!--        <link href="/css/button.css" rel="stylesheet"/>-->
+        <button role="button" class="btn-light">Merge all uploaded pdf</button>
+    </form>
 
-<!--<div>-->
-<!--    <input type="file" id="file">-->
-<!--    <script>-->
-<!--        const $input = document.querySelector('#file');-->
-<!--        $input.addEventListener('change', event => {-->
-<!--            const data = new FormData();-->
-<!--            data.append('file', event.target.files[0]);-->
-<!--            fetch('/upload', {-->
-<!--                method: 'post',-->
-<!--                body: data-->
-<!--            }).then(res => res.text()).then(res => {-->
-<!--                const log = document.createElement('p');-->
-<!--                log.innerHTML = res;-->
-<!--                document.body.appendChild(log);-->
-<!--            })-->
-<!--        })-->
-<!--    </script>-->
-<!--</div>-->
+</div>
 
+<div>
+    <table class="table" aria-setsize="10">
+        <thead>
+        <tr>
+            <th>file names</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="filename : ${filesnames}">
+            <td th:text="${filename}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

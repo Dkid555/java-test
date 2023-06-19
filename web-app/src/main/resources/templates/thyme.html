@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>add Bootstrap css demo</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.getFirstname()}"></td>
+            <td th:text="${person.getLastName()}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div>
+    <form method="post" class="container" action="/send">
+        <p><input type="text" name="first"></p>
+        <p><input name="second"></p>
+        <button>send information</button>
+    </form>
+</div>
+</body>
+</html>

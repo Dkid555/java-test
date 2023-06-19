@@ -1,28 +1,19 @@
 package com.app.controller;
 
 
-import com.app.service.FileUploadService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import com.app.service.Person;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class ControllerHtml {
-    Stack<String> filequery = new Stack<>();
+
 
     //    private StorageService storageService;
 //
@@ -50,38 +41,50 @@ public class ControllerHtml {
         return "SecurePage";
     }
 
-    @RequestMapping("/MergePDF")
-    public String MergePDF() {
-        return "MergePDF";
+
+    @RequestMapping(value = "/thymeleaf")
+    public String thyme() {
+        return "/thyme";
     }
 
-
-    @Autowired
-    FileUploadService fileUploadService;
-
-    @PostMapping("/upload")
-
-    public String upload(@RequestParam("file") MultipartFile file) throws IOException {
-        fileUploadService.fileUpload(file);
-        filequery.push(file.getOriginalFilename());
-        System.out.println(filequery.peek());
-        return "redirect:/MergePDF";
+    @RequestMapping("/demo")
+    public String hi(Model model) {
+        model.addAttribute("message", "Greeting from JAVA");
+        model.addAttribute("second_message", "Yeah, it's still from java");
+        return "/helloworld";
     }
 
+    @RequestMapping("/boot")
+    public String bootstra(Model model) {
 
-    @RequestMapping(value = "/pdf1/", method = RequestMethod.GET)
-
-    public ResponseEntity<byte[]> merge2() throws IOException {
-        new mergepdf().merge2("C:\\test_upload\\" + filequery.pop(), "C:\\test_upload\\" + filequery.pop());
-//        return new mergepdf().merge2("C:\\Plitkazavr\\Work258\\Magica\\Marstood\\pdf\\1.pdf", "C:\\Plitkazavr\\Work258\\Magica\\Marstood\\pdf\\1.pdf");
-        Path path = Paths.get("C:\\Users\\dima\\Downloads\\merged.pdf");
-        byte[] contents = Files.readAllBytes(path);
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF);
-        String filename = "merge.pdf";
-        headers.setContentDispositionFormData(filename, filename);
-        headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-        ResponseEntity<byte[]> response = new ResponseEntity<>(contents, headers, HttpStatus.OK);
-        return response;
+        return "/bootstraptest";
     }
+
+    private final List<Person> persons = new ArrayList<>();
+
+    @RequestMapping("/iteration")
+    public String bootstr(Model model) {
+
+        persons.add(new Person("Dmitrii", "Krutogolov"));
+        persons.add(new Person("Andrey", "Krutogolov"));
+        persons.add(new Person("Tatiana", "Kirillova"));
+        persons.add(new Person("Kristina", "Krutogolova"));
+        persons.add(new Person("Irina", "Chvey"));
+        model.addAttribute("persons", persons);
+        return "thyme";
+    }
+
+    @RequestMapping("/thyme")
+    public String go(Model model) {
+        model.addAttribute("persons", persons);
+        return "/thyme";
+    }
+
+    @PostMapping("/send")
+    public String send(Model model, @RequestParam("first") String firstname, @RequestParam("second") String lastname) {
+        persons.add(new Person(firstname, lastname));
+        model.addAttribute("persons", persons);
+        return "redirect:/thyme";
+    }
+
 }

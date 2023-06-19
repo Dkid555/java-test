@@ -1,7 +1,11 @@
 package com.app.main;
 
+import jakarta.servlet.MultipartConfigElement;
+import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.unit.DataSize;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -9,6 +13,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //@PropertySource("classpath:src/main/resources/application.properties")
 //@EnableWebMvc
 class SpringConfig implements WebMvcConfigurer {
+    @Bean
+    MultipartConfigElement multipartConfigElement() {
+        MultipartConfigFactory factory = new MultipartConfigFactory();
+        factory.setMaxFileSize(DataSize.ofBytes(512000000L));
+        factory.setMaxRequestSize(DataSize.ofBytes(512000000L));
+        return factory.createMultipartConfig();
+    }
 //    @Autowired
 //    Environment env;
 //    @Override
