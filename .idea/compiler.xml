@@ -18,6 +18,7 @@
         <module name="pdf-extract-images" />
         <module name="java-hibernate" />
         <module name="spring-annotations" />
+        <module name="PDFeditor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,6 +39,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="PDFeditor" options="-parameters" />
       <module name="java-test-parent" options="" />
       <module name="spring-boot" options="-parameters" />
       <module name="web-app" options="-parameters" />

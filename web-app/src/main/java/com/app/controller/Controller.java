@@ -18,10 +18,10 @@ import java.nio.file.Paths;
 @RestController
 
 public class Controller {
-    @RequestMapping("/")
-    public String index() {
-        return "Start page of Boot!";
-    }
+//    @RequestMapping("/")
+//    public String index() {
+//        return "Start page of Boot!";
+//    }
 
 //    @RequestMapping("/hello")
 //    public String hello() {

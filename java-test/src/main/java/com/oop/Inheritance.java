@@ -17,3 +17,11 @@ public class Inheritance {
 class Inheritance2 extends Inheritance {
 
 }
+
+
+
+
+
+
+
+

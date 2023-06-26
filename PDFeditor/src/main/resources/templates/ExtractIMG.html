@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <!--    <link th:href="@{/js/progress.js}" scope=>-->
+
+
+</head>
+<script>
+    function start() {
+        var element = document.getElementById("myprogressBar");
+        var width = 1;
+        var identity = setInterval(scene, 10);
+
+        function scene() {
+            if (width >= 100) {
+                clearInterval(identity);
+            } else {
+                width++;
+                element.style.width = width + '%';
+            }
+        }
+    }
+</script>
+<style>
+    /*#Progress_Status {*/
+    /*    width: 50%;*/
+    /*    background-color: #ddd;*/
+    /*}*/
+
+    /*#myprogressBar {*/
+    /*    width: 2%;*/
+    /*    height: 20px;*/
+    /*    background-color: #4CAF50;*/
+    /*}*/
+    #myprogressBar {
+        border: none;
+        background-color: #5068f6;
+    }
+</style>
+<body>
+<main>
+    <a href="/">
+        <header class="brand-name">
+            <img class="brand-logo" src="../static/images/logo.jpg" width="50"
+                 th:src="@{/images/logo.jpg}" alt="logo" aria-hidden="true">
+        </header>
+    </a>
+</main>
+<div class="ui-widget">
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>
+                <form action="/uploadIMG" enctype="multipart/form-data" method="post" class="container">
+
+                    <input type="file" name="file"><br>
+                    <button onclick="start()">Upload</button>
+
+                </form>
+            </td>
+            <td>
+                <div id="Progress_Status">
+                    <progress id="myprogressBar"></progress>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <form action="/Generate">
+        <button>Get Images From PDF</button>
+    </form>
+</div>
+<div>
+    <form action="/Zip">
+        <button>Compress and Download ZIP</button>
+    </form>
+</div>
+
+<div>
+    <table class="table" aria-setsize="10">
+        <thead>
+        <tr>
+            <th>file name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="file : ${fileofPics}">
+            <td th:text="${file}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

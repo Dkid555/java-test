@@ -16,10 +16,6 @@
 </main>
 
 
-<!--<div>-->
-<!--    <a href="/pdf/">download merged pdf</a>-->
-<!--</div>-->
-
 <div class="ui-widget">
     <form action="/uploadMerge" enctype="multipart/form-data" method="post" class="container">
         <input type="file" name="file"><br>
@@ -29,9 +25,8 @@
 
 <div class="ui-widget">
     <form action="/pdfmerge/" class="container">
-        <!-- HTML !-->
-        <!--        <link href="/css/button.css" rel="stylesheet"/>-->
-        <button role="button" class="btn-light">Merge all uploaded pdf</button>
+
+        <button role="button" class="btn-light" onclick="this.reload()">Merge all uploaded pdf</button>
     </form>
 
 </div>

@@ -94,10 +94,11 @@ class listiter {
     }
 }
 
+
+////////////////////////////////////////////////////////////
+
 class iterable {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        Collections.addAll(list, new Integer[]{1, 2, 3, 4, 5, 6});
 
         for (int i : Range.fromTo(0, 100)) {
             System.out.println(i);

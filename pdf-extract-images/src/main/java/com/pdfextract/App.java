@@ -55,7 +55,7 @@ public class App extends PDFStreamEngine {
         String inp = new Scanner(System.in).nextLine();
         if (inp.equals("1")) {
             System.out.println("Put file path + name:\n");
-            String file = new Scanner(System.in).nextLine();
+            String file = new Scanner(System.in).nextLine().replaceAll("\"", "");
             System.out.println("Extraction path:\n");
             String path = new Scanner(System.in).nextLine();
 //            Path createpath = Files.createTempDirectory(path);
@@ -63,14 +63,14 @@ public class App extends PDFStreamEngine {
         }
         if (inp.equals("2")) {
             System.out.println("Put file path + name:\n");
-            String file = new Scanner(System.in).nextLine();
+            String file = new Scanner(System.in).nextLine().replaceAll("\"", "");
             System.out.println("Extraction path:\n");
             String path = new Scanner(System.in).nextLine();
             new pdfsplit().run(file, path);
         }
         if (inp.equals("3")) {
             System.out.println("Put file path + name:\n");
-            String file = new Scanner(System.in).nextLine();
+            String file = new Scanner(System.in).nextLine().replaceAll("\"", "");
             System.out.println("Extraction path:\n");
             String path = new Scanner(System.in).nextLine();
             System.out.println("Begin:\n");
@@ -81,9 +81,9 @@ public class App extends PDFStreamEngine {
         }
         if (inp.equals("4")) {
             System.out.println("Put file1 path + name:\n");
-            String file1 = new Scanner(System.in).nextLine();
+            String file1 = new Scanner(System.in).nextLine().replaceAll("\"", "");
             System.out.println("Put file2 path + name:\n");
-            String file2 = new Scanner(System.in).nextLine();
+            String file2 = new Scanner(System.in).nextLine().replaceAll("\"", "");
             System.out.println("Destination:\n");
             String location = new Scanner(System.in).nextLine();
             new mergepdf().merge2(file1, file2, location);

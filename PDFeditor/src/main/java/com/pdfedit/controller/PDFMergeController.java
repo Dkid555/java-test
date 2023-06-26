@@ -1,11 +1,12 @@
-package com.app.controller;
+package com.pdfedit.controller;
 
-import com.app.service.FileUploadService;
-import com.app.service.mergepdf;
+import com.pdfedit.service.FileUploadService;
+import com.pdfedit.service.SendBytes;
+import com.pdfedit.service.mergepdf;
+import lombok.Getter;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,27 +19,31 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class PDFcontroller {
+@Getter
+public class PDFMergeController {
 
+
+    @Value("${PATHtoUPLOADtoMerge}")
+    private String PATHtoUPLOADtoMerge;
+
+    @Value("${PATHtoMERGE}")
+    private String PATHtoMERGE;
     //    Stack<String> filequery = new Stack<>();
+
     @Autowired
     FileUploadService fileUploadService;
+
     private final List<String> filenames = new ArrayList<>();
 
     @PostMapping("/uploadMerge")
     public String upload(@RequestParam("file") MultipartFile file) throws IOException {
-        fileUploadService.fileUpload(file);
-//        filequery.push(file.getOriginalFilename());
+        fileUploadService.fileUpload(file, PATHtoUPLOADtoMerge + "\\");
         filenames.add(file.getOriginalFilename());
         System.out.println(filenames.get(filenames.size() - 1));
-//        System.out.println(filequery.peek());
         return "redirect:/MergePDF";
     }
 
@@ -46,21 +51,19 @@ public class PDFcontroller {
     @RequestMapping(value = "/pdfmerge/", method = RequestMethod.GET)
 
     public ResponseEntity<byte[]> merge2() throws IOException {
-//        if(filenames.size() == 2){
-//            new mergepdf().merge2("C:\\test_upload\\" + filequery.pop(), "C:\\test_upload\\" + filequery.pop());
-//        }
-        new mergepdf().mergeMore(filenames);
 
-//        return new mergepdf().merge2("C:\\Plitkazavr\\Work258\\Magica\\Marstood\\pdf\\1.pdf", "C:\\Plitkazavr\\Work258\\Magica\\Marstood\\pdf\\1.pdf");
-        Path path = Paths.get("C:\\Users\\dima\\Downloads\\merged.pdf");
-        byte[] contents = Files.readAllBytes(path);
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF);
-        String filename = "merge.pdf";
-        headers.setContentDispositionFormData(filename, filename);
-        headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
-        ResponseEntity<byte[]> response = new ResponseEntity<>(contents, headers, HttpStatus.OK);
-        FileUtils.cleanDirectory(new File("C:\\test_upload\\"));
+        // merging our PDF's
+        new mergepdf().mergeMore(filenames, PATHtoMERGE, PATHtoUPLOADtoMerge);
+
+        // creating entity to return for download
+        ResponseEntity<byte[]> response = new SendBytes().convertandsend(PATHtoMERGE, "merged.pdf",
+                MediaType.APPLICATION_PDF, "merged.pdf");
+
+
+        //Cleaning Directories from files (ours uploaded pdf and merged)
+        FileUtils.cleanDirectory(new File(PATHtoUPLOADtoMerge));
+        FileUtils.cleanDirectory(new File(PATHtoMERGE));
+
         filenames.clear();
         return response;
     }

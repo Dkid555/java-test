@@ -25,6 +25,7 @@
         <module>java-csvjson</module>
         <module>Java-Selenium-test</module>
         <module>pdf-extract-images</module>
+        <module>PDFeditor</module>
 
 
         <!--        <module>java-deadlock</module>-->

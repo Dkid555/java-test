@@ -31,7 +31,7 @@ public class ControllerHtml {
         return "goodbye";
     }
 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "/")
     public String index() {
         return "index";
     }
