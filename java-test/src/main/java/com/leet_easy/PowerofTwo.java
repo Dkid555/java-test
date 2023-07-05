@@ -54,3 +54,22 @@ class codding {
         System.out.println(x >> 4);
     }
 }
+
+class asdP {
+
+    public static void main(String[] args) {
+        for (int i = 10; i < 10000; i++) {
+            int num = i;
+            int begin = num % 10;
+            //int pred = begin;
+            num = num / 10;
+            while (num != 0) {
+                if (num % 10 > begin + 1 || num % 10 < begin - 1)
+                    break;
+                begin = num % 10;
+                num = num / 10;
+            }
+            if (num == 0) System.out.println(i);
+        }
+    }
+}

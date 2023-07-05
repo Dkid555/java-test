@@ -27,10 +27,10 @@ import java.util.List;
 public class PDFMergeController {
 
 
-    @Value("${PATHtoUPLOADtoMerge}")
+    @Value("${property.PathtoUploadM}")
     private String PATHtoUPLOADtoMerge;
 
-    @Value("${PATHtoMERGE}")
+    @Value("${property.PathToMerge}")
     private String PATHtoMERGE;
     //    Stack<String> filequery = new Stack<>();
 

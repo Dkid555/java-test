@@ -25,11 +25,11 @@ import java.util.Stack;
 
 public class PDFtoIMGController {
 
-    @Value("${PATHtoUPLOADtoIMG}")
+    @Value("${property.PathtoUploadPDFtoIMG}")
     private String PATHtoUPLOADtoIMG;
-    @Value("${PicsPath}")
+    @Value("${property.PathforPicsFromPDF}")
     private String PicsPath;
-    @Value("${ZipPath}")
+    @Value("${property.PathtoStoreZIPofPics}")
     private String ZipPath;
 
     private int progress;

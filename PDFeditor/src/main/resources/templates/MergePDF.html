@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" th:href="@{/images/picture-as-pdf.ico}">
     <title>Merge-pdf-page</title>
 </head>
+<script th:src="@{/js/progress.js}"></script>
+
+<style>
+    #Progress_Status {
+        width: 50%;
+        background-color: #ddd;
+    }
+
+    #progressBar {
+        width: 0%;
+        height: 20px;
+        background-color: #4CAF50;
+    }
+
+    /*#myprogressBar {*/
+    /*    border: none;*/
+    /*    background-color: #5068f6;*/
+    /*}*/
+</style>
+
+
 <body>
 <main>
     <a href="/">
@@ -19,18 +41,20 @@
 <div class="ui-widget">
     <form action="/uploadMerge" enctype="multipart/form-data" method="post" class="container">
         <input type="file" name="file"><br>
-        <button>Upload</button>
+        <button onclick="start()">Upload</button>
     </form>
 </div>
 
 <div class="ui-widget">
     <form action="/pdfmerge/" class="container">
 
-        <button role="button" class="btn-light" onclick="this.reload()">Merge all uploaded pdf</button>
+        <button role="button" class="btn-light" onclick="start()">Merge all uploaded pdf</button>
     </form>
 
 </div>
-
+<div id="Progress_Status">
+    <div id="progressBar"></div>
+</div>
 <div>
     <table class="table" aria-setsize="10">
         <thead>

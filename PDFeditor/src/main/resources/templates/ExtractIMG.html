@@ -4,41 +4,28 @@
     <meta charset="UTF-8">
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
     <!--    <link th:href="@{/js/progress.js}" scope=>-->
-
+    <link rel="icon" type="image/x-icon" th:href="@{/images/picture-as-pdf.ico}">
 
 </head>
-<script>
-    function start() {
-        var element = document.getElementById("myprogressBar");
-        var width = 1;
-        var identity = setInterval(scene, 10);
-
-        function scene() {
-            if (width >= 100) {
-                clearInterval(identity);
-            } else {
-                width++;
-                element.style.width = width + '%';
-            }
-        }
-    }
-</script>
+<script th:src="@{/js/progress.js}"></script>
 <style>
-    /*#Progress_Status {*/
-    /*    width: 50%;*/
-    /*    background-color: #ddd;*/
-    /*}*/
+    #Progress_Status {
+        width: 50%;
+        background-color: #ddd;
+    }
+
+    #progressBar {
+        width: 0%;
+        height: 20px;
+        background-color: #4CAF50;
+    }
 
     /*#myprogressBar {*/
-    /*    width: 2%;*/
-    /*    height: 20px;*/
-    /*    background-color: #4CAF50;*/
+    /*    border: none;*/
+    /*    background-color: #5068f6;*/
     /*}*/
-    #myprogressBar {
-        border: none;
-        background-color: #5068f6;
-    }
 </style>
+
 <body>
 <main>
     <a href="/">
@@ -50,35 +37,31 @@
 </main>
 <div class="ui-widget">
 
-    <table class="table">
-        <tbody>
-        <tr>
-            <td>
-                <form action="/uploadIMG" enctype="multipart/form-data" method="post" class="container">
+    <!--    <table class="table">-->
 
-                    <input type="file" name="file"><br>
-                    <button onclick="start()">Upload</button>
+    <div>
+        <form action="/uploadIMG" enctype="multipart/form-data" method="post" class="popup">
+            <input type="file" name="file"><br>
+            <button onclick="start()">Upload</button>
+        </form>
+    </div>
 
-                </form>
-            </td>
-            <td>
-                <div id="Progress_Status">
-                    <progress id="myprogressBar"></progress>
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+
 </div>
 <div>
     <form action="/Generate">
-        <button>Get Images From PDF</button>
+        <button onclick="start()">Get Images From PDF</button>
     </form>
+
 </div>
 <div>
     <form action="/Zip">
-        <button>Compress and Download ZIP</button>
+        <button onclick="start()">Compress and Download ZIP</button>
     </form>
+</div>
+
+<div id="Progress_Status">
+    <div id="progressBar"></div>
 </div>
 
 <div>
