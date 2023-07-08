@@ -51,6 +51,6 @@ public class ZigZagConversion {
 
 
     public static void main(String[] args) {
-        System.out.println(convert("PAYPALISHIRING", 4));
+        System.out.println(convert("ISITWORLDSCOLLIDINGISITGONABE", 4));
     }
 }
