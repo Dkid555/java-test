@@ -40,13 +40,11 @@ public class SudokuSolver {
                 }
             }
         }
-
-        checkvalidity(filled, emptyIndexes, board);
-
+        FillingUp(filled, emptyIndexes, board);
     }
 
-    private static boolean checkvalidity(Map<String, Set<Integer>> filled, Set<List<Integer>> emptyIndexes,
-                                         char[][] board) {
+    private static boolean FillingUp(Map<String, Set<Integer>> filled, Set<List<Integer>> emptyIndexes,
+                                     char[][] board) {
         for (List<Integer> indexes : emptyIndexes) {
             int row = indexes.get(0);
             int column = indexes.get(1);
@@ -59,7 +57,7 @@ public class SudokuSolver {
                     filled.get("column " + column).add(number);
                     filled.get("box " + row / 3 + "-" + column / 3).add(number);
                     emptyIndexes.remove(indexes);
-                    if (checkvalidity(filled, emptyIndexes, board))
+                    if (FillingUp(filled, emptyIndexes, board))
                         return true;
                     board[row][column] = '.';
                     filled.get("row " + row).remove(number);

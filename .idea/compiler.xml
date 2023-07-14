@@ -8,17 +8,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="java-test" />
-        <module name="web-app" />
         <module name="Java-Selenium-test" />
         <module name="junit" />
         <module name="java-mysql-test" />
         <module name="java-mysql-hibernate" />
-        <module name="spring-boot" />
         <module name="java-csvjson" />
-        <module name="pdf-extract-images" />
         <module name="java-hibernate" />
-        <module name="spring-annotations" />
         <module name="PDFeditor" />
+        <module name="web-app" />
+        <module name="Brotli-Compress" />
+        <module name="spring-boot" />
+        <module name="pdf-extract-images" />
+        <module name="spring-annotations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

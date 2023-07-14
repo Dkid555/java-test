@@ -35,10 +35,10 @@ class ListNode {
         this.next = next;
     }
 
-//    @Override
-//    public String toString() {
-//        return (val + ", " + next).replaceAll(", null", "");
-//    }
+    @Override
+    public String toString() {
+        return (val + ", " + next).replaceAll(", null", "");
+    }
 
 }
 
