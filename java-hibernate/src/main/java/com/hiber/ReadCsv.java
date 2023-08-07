@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class ReadCsv {
-    List<String[]> file = new ArrayList<>();
+    public List<String[]> file = new ArrayList<>();
     String path = new String();
 
     public void read() {

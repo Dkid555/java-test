@@ -37,6 +37,8 @@ public class FindMinimuminRotatedSortedArray {
         return nums[begin];
     }
 
+
+    // if in array duplicates is allowed
     public static int findMinWithDupl(int[] nums) {
         int begin = 0;
         int[] res = Arrays.stream(nums).distinct().toArray();

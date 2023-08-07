@@ -15,6 +15,7 @@
         <module name="java-csvjson" />
         <module name="java-hibernate" />
         <module name="PDFeditor" />
+        <module name="FileRename" />
         <module name="web-app" />
         <module name="Brotli-Compress" />
         <module name="spring-boot" />

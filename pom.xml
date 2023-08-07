@@ -27,6 +27,7 @@
         <module>pdf-extract-images</module>
         <module>PDFeditor</module>
         <module>Brotli-Compress</module>
+        <module>FileRename/FileRename</module>
 
 
         <!--        <module>java-deadlock</module>-->
