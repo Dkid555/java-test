@@ -29,7 +29,7 @@ public class FindCommonCharacters {
                         PreviousWordMap.remove(words[index].charAt(i));
                         if (PreviousWordMap.isEmpty())
                             break;
-                    }
+                    }//
 
                 }
             }
