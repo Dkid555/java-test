@@ -21,6 +21,28 @@ public class NumberofSubarrayswithBoundedMaximum {
         return res;
     }
 
+    ///// Better
+    public int numSubarrayBoundedMax2(int[] nums, int left, int right) {
+        int start = -1;
+        int count = 0;
+        int end = -1;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > right) { // if it is bigger, than array ends
+                start = end = i;
+                continue;
+            }
+
+            if (nums[i] >= left) {
+                end = i;
+            }
+
+            count += end - start;
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
         System.out.println(numSubarrayBoundedMax(new int[]{2, 1, 4, 3}, 2, 3));
     }
