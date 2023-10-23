@@ -4,6 +4,7 @@ package com.oop;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+import org.apache.commons.codec.binary.StringUtils;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -62,6 +63,7 @@ public class myServer {
         }
 
         private String handlePostRequest(HttpExchange httpExchange) throws IOException {
+
             byte[] bytes = httpExchange.getRequestBody().readAllBytes();
 
             //TODO gson
@@ -71,7 +73,8 @@ public class myServer {
 //            return gfg.name;
 
             //TODO JSONObject
-            JSONObject object = new JSONObject(new String(bytes));
+            //JSONObject object = new JSONObject(new String(bytes,StandardCharsets.UTF_8));
+            JSONObject object = new JSONObject(StringUtils.newStringUtf8(bytes));
             return object.getString("name");
         }
 

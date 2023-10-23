@@ -2,24 +2,19 @@ package com.leet_easy;
 
 public class BackspaceStringCompare {
     public static boolean backspaceCompare(String s, String t) {
-        StringBuilder str1 = new StringBuilder(s);
-        StringBuilder str2 = new StringBuilder(t);
-        str1 = Backspace(str1);
-        str2 = Backspace(str2);
-        return str1.toString().contentEquals(Backspace(str2));
+        return Backspace(new StringBuilder(s)).toString().contentEquals(Backspace(new StringBuilder(t)));
     }
 
     private static StringBuilder Backspace(StringBuilder str) {
-        for (int i = 0; i < str.length(); i++) {
+        int lenght = str.length();
+        for (int i = 0; i < lenght; i++) {
             if (str.charAt(i) == '#') {
-                if (i > 0) {
-                    str.deleteCharAt(i);
-                    str.deleteCharAt(i - 1);
-                    i--;
-                } else {
-                    str.deleteCharAt(i);
-                    i--;
+                str.deleteCharAt(i);
+                if (i != 0) {
+                    str.deleteCharAt(--i);
                 }
+                --i;
+                lenght = str.length();
             }
         }
         return str;
@@ -29,3 +24,7 @@ public class BackspaceStringCompare {
         System.out.println(backspaceCompare("ab##", "c#d#"));
     }
 }
+
+//Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+//
+//Note that after backspacing an empty text, the text will continue empty.
