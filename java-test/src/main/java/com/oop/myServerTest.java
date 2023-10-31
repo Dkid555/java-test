@@ -1,6 +1,6 @@
 package com.oop;
 
-import java.net.HttpURLConnection;
+import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -10,15 +10,17 @@ import static java.lang.Thread.sleep;
 public class myServerTest {
 
     public static void main(String[] args) {
-        ExecutorService service = Executors.newFixedThreadPool(1000);
-        service.execute(() -> {
-            for (int i = 0; i < 1000; i++) {
+        ExecutorService service = Executors.newFixedThreadPool(100);
+
+        for (int i = 1; i < 100; ++i) {
+            service.execute(() -> {
                 try {
 //                    URL myURL = new URL("http://localhost:8000/test?name=Andrey");
 //                    URLConnection myURLConnection = myURL.openConnection();
 //                    myURLConnection.connect();
-                    URL myURL = new URL("http://localhost:8000/test?name=Andrey");
-                    HttpURLConnection connection = (HttpURLConnection) myURL.openConnection();
+                    //System.out.println(i);
+                    URL myURL = new URL("https://plitkazavr.ru/Kutahya/Visconte/");//http://localhost:8000/test?name=Andrey
+                    HttpsURLConnection connection = (HttpsURLConnection) myURL.openConnection();
                     connection.setRequestMethod("GET");
                     connection.connect();
                     System.out.println(connection.getResponseMessage());
@@ -31,9 +33,10 @@ public class myServerTest {
 //                    emitter.completeWithError(e);
 //                    return;
                 }
-            }
+
 //            emitter.complete();
-        });
+            });
+        }
         service.shutdown();
     }
 }
