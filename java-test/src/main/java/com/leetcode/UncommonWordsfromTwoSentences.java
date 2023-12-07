@@ -1,9 +1,6 @@
 package com.leetcode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UncommonWordsfromTwoSentences {
     public static String[] uncommonFromSentences(String s1, String s2) {
@@ -23,6 +20,6 @@ public class UncommonWordsfromTwoSentences {
     }
 
     public static void main(String[] args) {
-        System.out.println(uncommonFromSentences("this apple is sweet", "this apple is sour"));
+        System.out.println(Arrays.toString(uncommonFromSentences("this apple is sweet", "this apple is sour")));
     }
 }
