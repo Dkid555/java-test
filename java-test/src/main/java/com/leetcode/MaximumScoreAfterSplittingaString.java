@@ -2,15 +2,21 @@ package com.leetcode;
 
 public class MaximumScoreAfterSplittingaString {
     public int maxScore(String s) {
-        int maxScore = 0;
-        int countZerosLeft = 0;
-        int countOnesRight = (int) s.chars().filter(ch -> ch == '1').count();
-        for (int i = 0; i < s.length() - 1; i++) {
-            countZerosLeft += s.charAt(i) == '0' ? 1 : 0;
-            countOnesRight -= s.charAt(i) == '1' ? 1 : 0;
-            maxScore = Math.max(maxScore, countZerosLeft + countOnesRight);
-        }
+        int ans = Integer.MIN_VALUE;
+        int n = s.length();
 
-        return maxScore;
+        int ones = 0;
+        int zero = 0;
+
+        for (int i = 0;i < n - 1; i ++) {
+            if (s.charAt(i) == '0') zero++;
+            else {
+                ones++;
+                zero--;
+            }
+            if(ans < zero) ans = zero;
+        }
+        ones += s.charAt(n - 1) == '1' ? 1 : 0;
+        return ones + ans;
     }
 }
