@@ -38,4 +38,8 @@ public class DeleteParenthesNotValid {
     }
 
 
+    public static class NumberofCommonFactors {
+
+
+    }
 }
