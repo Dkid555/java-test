@@ -143,6 +143,38 @@ public class TopMetaCodingInterviewQuestions {
         }
     }
 
+    public static void print_bin_tree(TreeNode root){
+        if(root == null)
+            return;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; ++i){
+                TreeNode node = queue.poll();
+
+                System.out.print(node.val + " ");
+                if(node.left != null)
+                    queue.offer(node.left);
+                if(node.right != null)
+                    queue.offer(node.right);
+            }
+            System.out.println();
+        }
+    }
+    //'The sky is dark blue.' Can you reverse the order of this string?
+
+    public String reverseSky(String string){
+        StringBuilder sb = new StringBuilder(string);
+        return sb.reverse().toString();
+    }
+    //You are given four words - apple, pear, pier, and pie. Can this be completely segmented? If yes, then how?
+    // yes, like apple -> a and pple (a - word, pple - suffix)
+
+    //Here is a list of daily stock prices. Return the buy and sell prices to maximize the profit.
+
+
+
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
