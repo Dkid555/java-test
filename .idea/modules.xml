@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/java-hibernate.iml" filepath="$PROJECT_DIR$/java-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-mysql-hibernate.iml" filepath="$PROJECT_DIR$/java-mysql-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-test-parent.iml" filepath="$PROJECT_DIR$/java-test-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-app/web-app.iml" filepath="$PROJECT_DIR$/web-app/web-app.iml" />
     </modules>
   </component>
 </project>
