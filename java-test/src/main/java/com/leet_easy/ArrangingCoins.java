@@ -19,7 +19,7 @@ public class ArrangingCoins {
 
     //Here we need to find largest K that satisfies this equation K*(K+1)/2 <= N
     public static void main(String[] args) {
-        System.out.println(arrangeCoins(15));
+        System.out.println(arrangeCoins2(15));
     }
 
 

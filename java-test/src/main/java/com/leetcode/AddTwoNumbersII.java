@@ -33,4 +33,7 @@ public class AddTwoNumbersII {
         return result;
     }
 
+    public static void main(String[] args) {
+
+    }
 }

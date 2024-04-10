@@ -25,7 +25,7 @@ Write the code that will take a string and make this conversion given a number o
 public class ZigZagConversion {
 
     public static String convert(String s, int numRows) {
-        String str = new String();
+        StringBuilder str = new StringBuilder();
         Map<Integer, String> ZigZag = new HashMap<>();
         int index = 0;
         for (int i = 0; i < s.length(); ) {
@@ -44,9 +44,9 @@ public class ZigZagConversion {
 
         }
         for (Integer key : ZigZag.keySet()) {
-            str += ZigZag.get(key);
+            str.append(ZigZag.get(key));
         }
-        return str;
+        return str.toString();
     }
 
 
