@@ -1,4 +1,4 @@
-package com.Amazon.from_file.Arrrays;
+package com.Amazon.Arrrays;
 
 public class SearchinRotatedSortedArray {
     public int search(int[] nums, int target) {

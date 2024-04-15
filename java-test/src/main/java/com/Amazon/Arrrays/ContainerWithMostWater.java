@@ -1,4 +1,4 @@
-package com.Amazon.from_file.Arrrays;
+package com.Amazon.Arrrays;
 
 public class ContainerWithMostWater {
     public int maxArea(int[] height) {
