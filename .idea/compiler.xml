@@ -27,6 +27,7 @@
       <module name="CsvToJson" target="18" />
       <module name="java-deadlock" target="18" />
       <module name="java-pdf-converter" target="18" />
+      <module name="java-test" target="18" />
       <module name="java-test-leetcode" target="18" />
       <module name="java-web-app" target="18" />
       <module name="maven-test-api" target="1.8" />
