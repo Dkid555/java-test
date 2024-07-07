@@ -12,6 +12,8 @@
       <set>
         <option value="$PROJECT_DIR$/java-deadlock/pom.xml" />
         <option value="$PROJECT_DIR$/java-mysql-test/java-hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/java-test-leetcode/pom.xml" />
+        <option value="$PROJECT_DIR$/java-test/java-pdf-converter/pom.xml" />
         <option value="$PROJECT_DIR$/java-web-app/pom.xml" />
       </set>
     </option>

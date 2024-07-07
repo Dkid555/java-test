@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-test" />
+        <module name="java-test-leetcode-new" />
         <module name="Java-Selenium-test" />
         <module name="junit" />
         <module name="java-mysql-test" />
@@ -26,6 +26,8 @@
     <bytecodeTargetLevel>
       <module name="CsvToJson" target="18" />
       <module name="java-deadlock" target="18" />
+      <module name="java-pdf-converter" target="18" />
+      <module name="java-test-leetcode" target="18" />
       <module name="java-web-app" target="18" />
       <module name="maven-test-api" target="1.8" />
       <module name="maven-test-api-test" target="1.8" />

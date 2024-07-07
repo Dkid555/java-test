@@ -13,7 +13,6 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>java-test</module>
         <module>spring-boot</module>
         <module>java-mysql-test</module>
         <module>spring-annotations</module>
@@ -28,6 +27,7 @@
         <module>PDFeditor</module>
         <module>Brotli-Compress</module>
         <module>FileRename/FileRename</module>
+        <module>java-test-leetcode-new</module>
 
 
         <!--        <module>java-deadlock</module>-->
