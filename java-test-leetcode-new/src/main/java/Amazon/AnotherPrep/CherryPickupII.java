@@ -1,12 +1,6 @@
 package Amazon.AnotherPrep;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-public class CherryPickupII {
-
+public class CherryPickupII {//
     public static void main(String[] args) {
         System.out.println(cherryPickup(
                 new int[][]
